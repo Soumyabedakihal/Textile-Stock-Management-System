@@ -13,8 +13,10 @@ import springfox.documentation.service.Contact;
 import springfox.documentation.service.VendorExtension;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
+@EnableSwagger2
 public class TextileStockManagementSystemApplication {
 
 	public static void main(String[] args) {
@@ -23,10 +25,10 @@ public class TextileStockManagementSystemApplication {
 	
 	@SuppressWarnings("rawtypes")
 	List<VendorExtension> vendorExtensions = new ArrayList<VendorExtension>();
-	Contact contact = new springfox.documentation.service.Contact("vikas", "https://testyentra.com", "vikas.k@mail.com");
+	Contact contact = new springfox.documentation.service.Contact("soumya", "https://testyentra.com", "soumyabedakihal@mail.com");
 	
-	ApiInfo apiInfo = new ApiInfo("Test Yentra Hospital App",
-				"API's to person all actions related to book a hospital",
+	ApiInfo apiInfo = new ApiInfo("Test Yentra Textile Stock Management System App",
+				"API's to person all actions related to a supplier,warehose,shop",
 				"Snapshot-0.0.1", "https://testyantraglobal.com/", 
 				contact, 
 				"www.ty.com", 

@@ -1,6 +1,5 @@
 package com.ty.TextileStockManagementSystem.dao;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,10 +26,10 @@ public class WarehouseDao {
 		}
 	}
 	
-	public List<Warehouse> getAllWarehouse(){
-		return warehouseRepository.findAll();
-	}
-	
+//	public List<Warehouse> getAllWarehouse(){
+//		return warehouseRepository.findAll();
+//	}
+//	
 	public Warehouse updateWarehouse(int id,Warehouse warehouse) {
 		Optional<Warehouse> opt=warehouseRepository.findById(id);
 		if(opt.isEmpty()) {

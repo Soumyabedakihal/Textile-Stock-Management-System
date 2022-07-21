@@ -1,6 +1,5 @@
 package com.ty.TextileStockManagementSystem.dao;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,10 +25,6 @@ public class AdminDao {
 		}else {
 			return opt.get();
 		}
-	}
-	
-	public List<Admin> getAllAdmin(){
-		return adminRepository.findAll();
 	}
 	
 	public Admin updateAdmin(int id,Admin admin) {

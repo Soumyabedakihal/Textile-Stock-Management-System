@@ -1,6 +1,5 @@
 package com.ty.TextileStockManagementSystem.dto;
 
-import java.nio.MappedByteBuffer;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -19,7 +18,7 @@ public class Warehouse {
 	private String Product;
 	private double cost;
 	private int quantity;
-	private int recorder_level;
+	private int reorder_level;
 	
 	@JoinColumn
 	@OneToOne
@@ -31,6 +30,24 @@ public class Warehouse {
 	@OneToMany(mappedBy="warehouse")
 	private List<Shop> shop;
 	
+	public int getWarehouse_id() {
+		return warehouse_id;
+	}
+	public void setWarehouse_id(int warehouse_id) {
+		this.warehouse_id = warehouse_id;
+	}
+	public List<Supplier> getSupplier() {
+		return supplier;
+	}
+	public void setSupplier(List<Supplier> supplier) {
+		this.supplier = supplier;
+	}
+	public List<Shop> getShop() {
+		return shop;
+	}
+	public void setShop(List<Shop> shop) {
+		this.shop = shop;
+	}
 	public Admin getAdmin() {
 		return admin;
 	}
@@ -55,11 +72,11 @@ public class Warehouse {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public int getRecorder_level() {
-		return recorder_level;
+	public int getReorder_level() {
+		return reorder_level;
 	}
-	public void setRecorder_level(int recorder_level) {
-		this.recorder_level = recorder_level;
+	public void setReorder_level(int reorder_level) {
+		this.reorder_level = reorder_level;
 	}
 	
 }
